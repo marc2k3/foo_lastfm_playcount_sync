@@ -20,7 +20,6 @@ public:
 
 	metadb_index_hash hash{};
 	std::string album, albumArtist, artist, track;
-	uint32_t duration{};
 
 	operator bool() const { return artist.length() && track.length(); }
 
