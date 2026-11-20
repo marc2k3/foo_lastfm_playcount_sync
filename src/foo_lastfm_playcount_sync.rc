@@ -1,0 +1,31 @@
+// Microsoft Visual C++ generated resource script.
+//
+#pragma code_page(65001)
+
+#include "Resource.hpp"
+#include <winres.h>
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United Kingdom) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_PREFERENCES DIALOGEX 0, 0, 332, 288
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Shell Dlg 2", 400, 0, 0x0
+BEGIN
+    CONTROL         "Last.fm User Name", IDC_HEADER, "foobar2000:separator", 0, 0, 0, 332, 12
+    EDITTEXT                             IDC_EDIT_USER_NAME,                    4, 18, 170, 14,  ES_AUTOHSCROLL
+    AUTOCHECKBOX    "Enable",            IDC_CHECK_ENABLED,                     180, 20, 120, 10
+    PUSHBUTTON      "Clear session",     IDC_BTN_CLEAR,                         4, 38, 80, 14
+    PUSHBUTTON      "Authorise",         IDC_BTN_AUTH,                          94, 38, 80, 14
+END
+
+#endif    // English (United Kingdom) resources
+/////////////////////////////////////////////////////////////////////////////

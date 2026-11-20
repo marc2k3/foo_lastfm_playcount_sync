@@ -1,0 +1,12 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Win32" />
+    <Platform Name="x64" />
+  </Configurations>
+  <Project Path="../foobar2000-sdk/foobar2000/foobar2000_component_client/foobar2000_component_client.vcxproj" Id="71ad2674-065b-48f5-b8b0-e1f9d3892081" />
+  <Project Path="../foobar2000-sdk/foobar2000/helpers/foobar2000_sdk_helpers.vcxproj" Id="ee47764e-a202-4f85-a767-abdab4aff35f" />
+  <Project Path="../foobar2000-sdk/foobar2000/SDK/foobar2000_SDK.vcxproj" Id="e8091321-d79d-4575-86ef-064ea1a4a20d" />
+  <Project Path="../foobar2000-sdk/libPPUI/libPPUI.vcxproj" Id="7729eb82-4069-4414-964b-ad399091a03f" />
+  <Project Path="../foobar2000-sdk/pfc/pfc.vcxproj" Id="ebfffb4e-261d-44d3-b89c-957b31a0bf9c" />
+  <Project Path="foo_lastfm_playcount_sync.vcxproj" Id="c41a0532-e67c-456c-99c9-b231b22c7d9f" DefaultStartup="true" />
+</Solution>

@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Dialog">
+      <UniqueIdentifier>{0111c206-43b3-445b-9548-c66a5ba81211}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Helpers">
+      <UniqueIdentifier>{843385c1-2609-473e-8f0e-0fe484edb516}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Metadb">
+      <UniqueIdentifier>{d1c92b00-38a0-447a-9cc5-17b520f44fd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu">
+      <UniqueIdentifier>{89ac7b05-52f9-477d-af7d-70dbc269d823}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Web">
+      <UniqueIdentifier>{f3f592b9-dc38-45e6-b267-0401e31591b3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Dialog\Config.hpp">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="Helpers\Helpers.hpp">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Helpers\JsonData.hpp">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Helpers\Message.hpp">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Helpers\Time.hpp">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Metadb\HashManager.hpp">
+      <Filter>Metadb</Filter>
+    </ClInclude>
+    <ClInclude Include="Metadb\MetaV2.hpp">
+      <Filter>Metadb</Filter>
+    </ClInclude>
+    <ClInclude Include="Web\AuthTask.hpp">
+      <Filter>Web</Filter>
+    </ClInclude>
+    <ClInclude Include="Web\Request.hpp">
+      <Filter>Web</Filter>
+    </ClInclude>
+    <ClInclude Include="Web\TrackGetInfoTask.hpp">
+      <Filter>Web</Filter>
+    </ClInclude>
+    <ClInclude Include="Web\TrackGetScrobblesTask.hpp">
+      <Filter>Web</Filter>
+    </ClInclude>
+    <ClInclude Include="Web\TrackLoveTask.hpp">
+      <Filter>Web</Filter>
+    </ClInclude>
+    <ClInclude Include="Web\UserGetLovedTracksTask.hpp">
+      <Filter>Web</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.hpp" />
+    <ClInclude Include="GUIDS.hpp" />
+    <ClInclude Include="PCH.hpp" />
+    <ClInclude Include="Resource.hpp" />
+    <ClInclude Include="ThreadedProcessCallback.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Dialog\Config.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialog\DialogPreferences.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="Helpers\Helpers.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="Helpers\JsonData.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\ContextMenu.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\MainMenu.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Metadb\HashManager.cpp">
+      <Filter>Metadb</Filter>
+    </ClCompile>
+    <ClCompile Include="Metadb\MetadbDisplayFieldProvider.cpp">
+      <Filter>Metadb</Filter>
+    </ClCompile>
+    <ClCompile Include="Metadb\MetadbIndexClient.cpp">
+      <Filter>Metadb</Filter>
+    </ClCompile>
+    <ClCompile Include="Metadb\TrackPropertyProvider.cpp">
+      <Filter>Metadb</Filter>
+    </ClCompile>
+    <ClCompile Include="Web\AuthTask.cpp">
+      <Filter>Web</Filter>
+    </ClCompile>
+    <ClCompile Include="Web\Request.cpp">
+      <Filter>Web</Filter>
+    </ClCompile>
+    <ClCompile Include="Web\TrackGetInfoTask.cpp">
+      <Filter>Web</Filter>
+    </ClCompile>
+    <ClCompile Include="Web\TrackGetScrobblesTask.cpp">
+      <Filter>Web</Filter>
+    </ClCompile>
+    <ClCompile Include="Web\TrackLoveTask.cpp">
+      <Filter>Web</Filter>
+    </ClCompile>
+    <ClCompile Include="Web\UserGetLovedTracksTask.cpp">
+      <Filter>Web</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp" />
+    <ClCompile Include="PCH.cpp" />
+    <ClCompile Include="PlayCallbackStatic.cpp" />
+    <ClCompile Include="ThreadedProcessCallback.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="foo_lastfm_playcount_sync.rc" />
+  </ItemGroup>
+</Project>
