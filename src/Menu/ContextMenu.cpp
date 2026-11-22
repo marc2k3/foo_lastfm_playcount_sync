@@ -107,7 +107,7 @@ namespace
 				{
 					const auto method = index == 0u ? "track.love" : "track.unlove";
 					auto callback = fb2k::service_new<ThreadedProcessCallback>(handles, method);
-					const auto title = handles.get_count() == 1 ? "" : method;
+					const auto title = handles.get_count() == 1uz ? "" : method;
 					ThreadedProcessCallback::init(callback, title);
 				}
 				break;

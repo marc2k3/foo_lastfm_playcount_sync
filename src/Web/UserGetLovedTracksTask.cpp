@@ -82,9 +82,9 @@ void UserGetLovedTracksTask::run() noexcept
 	transaction_ptr->commit();
 	hm.refresh(to_refresh);
 
-	if (t.page == 1 && t.totalPages > 1)
+	if (t.page == 1u && t.totalPages > 1u)
 	{
-		for (size_t i = 2; i <= t.totalPages; ++i)
+		for (size_t i = 2uz; i <= t.totalPages; ++i)
 		{
 			std::this_thread::sleep_for(std::chrono::milliseconds(250));
 

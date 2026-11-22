@@ -9,10 +9,11 @@ void TrackLoveTask::build_payload() noexcept
 {
 	const auto sk = Config::get_session_key();
 
-	const auto api_sig = lfm::md5(
+	const auto api_sig = HashManager::get().md5(
 		"api_key{}artist{}method{}sk{}track{}{}",
 		Component::api_key,
-		m_meta.artist, m_method,
+		m_meta.artist,
+		m_method,
 		sk,
 		m_meta.track,
 		Component::secret

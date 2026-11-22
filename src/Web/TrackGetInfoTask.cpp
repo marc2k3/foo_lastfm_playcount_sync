@@ -40,7 +40,7 @@ void TrackGetInfoTask::run() noexcept
 
 	auto& hm = HashManager::get();
 	auto f = hm.get_fields(m_meta.hash);
-	f.loved = userloved.value() == 1 ? 1 : 0;
+	f.loved = userloved.value() == 1u ? 1u : 0u;
 	hm.set_fields(m_meta.hash, f);
 	hm.refresh(m_meta.hash);
 }

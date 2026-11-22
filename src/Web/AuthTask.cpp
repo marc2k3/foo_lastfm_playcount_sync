@@ -8,13 +8,14 @@ AuthTask::AuthTask(CWindow parent, std::string_view method, std::string_view tok
 
 void AuthTask::build_payload() noexcept
 {
+	auto& hm = HashManager::get();
 	m_payload.Add({ "api_key", Component::api_key.data() });
 	m_payload.Add({ "format", "json" });
 	m_payload.Add({ "method", m_method });
 
 	if (m_method == "auth.getToken")
 	{
-		const auto api_sig = lfm::md5(
+		const auto api_sig = hm.md5(
 			"api_key{}method{}{}",
 			Component::api_key,
 			m_method,
@@ -25,7 +26,7 @@ void AuthTask::build_payload() noexcept
 	}
 	else if (m_method == "auth.getSession")
 	{
-		const auto api_sig = lfm::md5(
+		const auto api_sig = hm.md5(
 			"api_key{}method{}token{}{}",
 			Component::api_key,
 			m_method,

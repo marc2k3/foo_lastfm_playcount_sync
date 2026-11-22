@@ -17,6 +17,13 @@ public:
 		return cached;
 	}
 
+	template <typename... Args>
+	std::string md5(fmt::string_view format, Args&&... args) noexcept
+	{
+		const auto str = fmt::format(fmt::runtime(format), std::forward<Args>(args)...);
+		return m_hasher_api->process_single_string(str.c_str()).asString().get_ptr();
+	}
+
 	lfm::Fields get_fields(const metadb_v2::rec_t& rec) noexcept;
 	lfm::Fields get_fields(metadb_index_hash hash) noexcept;
 	lfm::Set get_hashes(metadb_handle_list_cref handles) noexcept;
