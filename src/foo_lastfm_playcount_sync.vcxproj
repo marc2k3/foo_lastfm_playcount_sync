@@ -184,6 +184,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Dialog\Config.hpp" />
+    <ClInclude Include="Helpers\FileDialog.hpp" />
     <ClInclude Include="Helpers\Helpers.hpp" />
     <ClInclude Include="Helpers\JsonData.hpp" />
     <ClInclude Include="Helpers\Message.hpp" />

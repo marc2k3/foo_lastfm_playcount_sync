@@ -1,4 +1,5 @@
 #include "PCH.hpp"
+#include "Helpers/FileDialog.hpp"
 #include "Helpers/JsonData.hpp"
 
 namespace
@@ -47,7 +48,7 @@ namespace
 
 			flags = 0u;
 
-			if ((index <= 1 && !Config::user_check()) || !check_library_init())
+			if ((index <= 1u && !Config::user_check()) || !check_library_init())
 			{
 				flags |= flag_disabled;
 			}
@@ -71,24 +72,24 @@ namespace
 
 			switch (index)
 			{
-			case 0: // import/clear
-			case 1: // import/keep
+			case 0u: // import/clear
+			case 1u: // import/keep
 				if (Config::user_check())
 				{
 					HashManager::get().import_lastfm_loved(index == 0u);
 				}
 				break;
-			case 2:
+			case 2u:
 				library_search_ui::get()->show("%lfm_loved% IS 1");
 				break;
-			case 3:
+			case 3u:
 				library_search_ui::get()->show("%lfm_last_played% DURING LAST 1 WEEK SORT DESCENDING BY %lfm_last_played%");
 				break;
-			case 4:
-				init_file_dialog(false, JsonData::Import);
+			case 4u:
+				FileDialog::open(JsonData::Import);
 				break;
-			case 5:
-				init_file_dialog(true, JsonData::Export);
+			case 5u:
+				FileDialog::save(JsonData::Export);
 				break;
 			}
 		}
@@ -114,27 +115,6 @@ namespace
 			}
 
 			return false;
-		}
-
-		void init_file_dialog(bool save, const fb2k::fileDialogGetPath_t& path_func) noexcept
-		{
-			fb2k::fileDialogSetup::ptr dialog;
-
-			if (save)
-			{
-				dialog = fb2k::fileDialog::get()->setupSave();
-				dialog->setTitle("Save as");
-				dialog->setDefaultExtension("json");
-			}
-			else
-			{
-				dialog = fb2k::fileDialog::get()->setupOpen();
-				dialog->setTitle("Import from");
-			}
-
-			dialog->setParent(fb2k::get_main_window());
-			dialog->setFileTypes("JSON file|*.json|All files|*.*");
-			dialog->runSimple(path_func);
 		}
 	};
 
