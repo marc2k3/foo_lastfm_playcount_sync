@@ -15,4 +15,12 @@ git clone --recurse https://github.com/marc2k3/foo_lastfm_playcount_sync
 
 - Edit `Component.hpp` and add your own Last.fm PRO API key and secret.
 
-- Build!
+- Check the configuration is set to `Release` and choose your platform before building.
+
+- On success, the compiled DLL should be found at
+
+`src\x64\Release\foo_lastfm_playcount_sync.dll`
+
+or
+
+`src\Win32\Release\foo_lastfm_playcount_sync.dll`.
