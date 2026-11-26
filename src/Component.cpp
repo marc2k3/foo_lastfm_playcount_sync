@@ -32,6 +32,8 @@ namespace Component
 	public:
 		bool is_installed_correctly() noexcept final
 		{
+			// The requirement for 2.25 in this component is very real.
+			// Code in Helpers/FileDialog.hpp will crash if this check is removed.
 			return test_my_name("foo_lastfm_playcount_sync.dll")
 				&& core_version_info_v2::get()->test_version(2u, 25u, 0u, 0u)
 				&& IsWindows10OrGreater();
